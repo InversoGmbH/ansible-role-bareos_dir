@@ -24,6 +24,9 @@ bareos_dir_max_concurrent_jobs: 100
 # The messages configuration to use.
 bareos_dir_message: Daemon
 
+# Enable Auditing.
+bareos_dir_auditing: true
+
 # Enable TLS.
 bareos_dir_tls_enable: true
 

@@ -8,6 +8,9 @@ Director {
   Maximum Concurrent Jobs = {{ bareos_dir_max_concurrent_jobs }}
 {% endif %}
   Messages = "{{ bareos_dir_message }}"
+{% if bareos_dir_auditing %}
+  Auditing = {{ bareos_dir_auditing | ternary('yes', 'no') }}
+{% endif %}
 {% if not bareos_dir_tls_enable %}
   TLS Enable = No
 {% endif %}

@@ -46,6 +46,13 @@
       - bareos_dir_message != ""
     quiet: true
 
+- name: assert | Test bareos_dir_auditing
+  ansible.builtin.assert:
+    that:
+      - bareos_dir_auditing is defined
+      - bareos_dir_auditing is boolean
+    quiet: true
+
 - name: assert | Test bareos_dir_tls_enable
   ansible.builtin.assert:
     that:
